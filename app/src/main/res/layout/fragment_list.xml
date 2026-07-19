@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:padding="14dp"
+    android:background="@color/background">
+
+
+    <EditText
+        android:id="@+id/searchEditText"
+
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+
+        android:hint="Search movies..."
+        android:singleLine="true"
+        android:padding="14dp"
+
+        android:background="@drawable/bg_search"
+
+        android:textColor="@color/text_dark"
+        android:textColorHint="#777777" />
+
+
+    <Button
+        android:id="@+id/searchButton"
+
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+
+        android:layout_marginTop="10dp"
+
+        android:text="Search"
+
+        android:textColor="@color/white"
+        android:backgroundTint="@color/purple_main" />
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_gravity="center"
+        android:layout_margin="12dp"
+
+        android:visibility="gone" />
+
+
+    <!-- Pull To Refresh -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+
+        android:id="@+id/swipeRefreshLayout"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+
+        android:layout_weight="1">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+
+            android:id="@+id/moviesRecyclerView"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_marginTop="8dp" />
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>
